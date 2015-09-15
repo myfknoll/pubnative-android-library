@@ -6,7 +6,7 @@ Through PubNative, publishers can request over 20 parameters to enrich their ads
 
 #pubnative-android-library
 
-pubnative-ios-library is a collection of Open Source tools to implement API based native ads in Android.
+pubnative-android-library is a collection of Open Source tools to implement API based native ads in Android.
 
 ##Contents
 
