@@ -15,7 +15,9 @@ import net.pubnative.library.predefined.PubnativeActivityListener;
 @SuppressWarnings("deprecation")
 public class MainActivity extends ActionBarActivity implements OnClickListener, PubnativeActivityListener
 {
-    private final String app_token = "62cb87940b3a70cf67a200c3b443b47c20fd00b0a1aece21ec435d8e0521eb60";
+    // OLD_API: 62cb87940b3a70cf67a200c3b443b47c20fd00b0a1aece21ec435d8e0521eb60
+    // NEW_API: 6651a94cad554c30c47427cbaf0b613a967abcca317df325f363ef154a027092
+    private final String app_token = "6651a94cad554c30c47427cbaf0b613a967abcca317df325f363ef154a027092";
     
     View settingsButton = null;
     View interstitialButton    = null;
