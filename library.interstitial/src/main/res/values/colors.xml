@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pubnative_interstitial_background">#f4f4f4</color>
+    <color name="pubnative_interstitial_btn_green">#779C43</color>
+    <color name="pubnative_interstitial_black">@android:color/black</color>
+    <color name="pubnative_interstitial_white">@android:color/white</color>
+    <color name="pubnative_interstitial_shadow_normal">#555555</color>
+    <color name="pubnative_interstitial_shadow_dark">#151515</color>
+    <color name="pubnative_interstitial_dark_gray_semitransparent">#80000000</color>
+</resources>

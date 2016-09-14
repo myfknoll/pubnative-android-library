@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/pubnative_interstitial_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/pubnative_interstitial_background">
+
+    <ImageView
+        android:id="@+id/pubnative_interstitial_company_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="false"
+        android:src="@drawable/pubnative_interstitial_logo_bw"/>
+
+    <TextView
+        android:id="@+id/pubnative_interstitial_cta"
+        style="@style/pubnative_interstitial_DownloadButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/pubnative_interstitial_company_logo"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/pubnative_interstitial_description"
+        style="@style/pubnative_interstitial_DailyInfoBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_above="@+id/pubnative_interstitial_cta"
+        android:layout_alignLeft="@+id/pubnative_interstitial_data"
+        android:layout_alignRight="@+id/pubnative_interstitial_data"
+        android:layout_marginBottom="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/pubnative_interstitial_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pubnative_interstitial_description"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/pn_interstitial_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:background="@color/pubnative_interstitial_white"
+            android:padding="3dp"/>
+
+        <TextView
+            android:id="@+id/pubnative_interstitial_title"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/pn_interstitial_icon"
+            android:layout_toRightOf="@id/pn_interstitial_icon"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <RatingBar
+            android:id="@+id/pubnative_interstitial_rating"
+            style="@style/ratingBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pubnative_interstitial_title"
+            android:layout_alignBottom="@id/pn_interstitial_icon"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/pn_interstitial_icon"
+            android:isIndicator="true"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/pubnative_interstitial_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/pubnative_interstitial_data"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/pubnative_interstitial_dark_gray_semitransparent"
+        android:padding="3dp"
+        android:text="@string/pubnative_interstitial_sponsored_text"
+        android:textColor="@color/pubnative_interstitial_white"
+        android:textSize="10sp"/>
+
+    <net.pubnative.library.widget.PubnativeContentInfoWidget
+        android:id="@+id/pubnative_content_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>

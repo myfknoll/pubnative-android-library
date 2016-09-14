@@ -1,0 +1,3 @@
+<resources>
+    <item name="pubnative_banner" type="layout">@layout/pubnative_banner_tablet</item>
+</resources>

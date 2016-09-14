@@ -1,0 +1,95 @@
+<RelativeLayout android:id="@+id/pubnative_banner_root_view"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/pubnative_banner_view"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@android:color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/pubnative_banner_image"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/pubnative_text_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/pubnative_banner_image"
+            android:layout_toLeftOf="@+id/pubnative_banner_button"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_centerVertical="true"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/pubnative_banner_title"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight=".85"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/pubnative_banner_description"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1.15"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pubnative_banner_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/pubnative_install_button"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@null"/>
+
+        <TextView
+            android:id="@+id/pubnative_banner_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="2dp"
+            android:background="@color/pubnative_banner_sponsored_purple"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:text="@string/sponsored"/>
+
+        <net.pubnative.library.widget.PubnativeContentInfoWidget
+            android:id="@+id/pubnative_content_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

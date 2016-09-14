@@ -1,0 +1,41 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="pubnative_interstitial_ShadedTextStyle">
+        <item name="android:shadowColor">@color/pubnative_interstitial_shadow_normal</item>
+        <item name="android:shadowDx">-0.5</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+
+    <style name="pubnative_interstitial_DarkShadedTextStyle">
+        <item name="android:shadowColor">@color/pubnative_interstitial_shadow_dark</item>
+        <item name="android:shadowDx">-0.5</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+
+    <style name="pubnative_interstitial_DailyInfoBox">
+        <item name="android:textColor">@color/pubnative_interstitial_white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/pubnative_interstitial_dark_grey_box</item>
+    </style>
+
+    <style name="pubnative_interstitial_DownloadButtonStyle" parent="@style/pubnative_interstitial_ShadedTextStyle">
+        <item name="android:textColor">@color/pubnative_interstitial_white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">34dp</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:background">@color/pubnative_interstitial_btn_green</item>
+        <item name="android:drawableLeft">@drawable/pubnative_interstitial_play_store_icon_small</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ratingBarStyle" parent="android:Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/pubnative_ratingbar_small_material</item>
+        <item name="android:indeterminateDrawable">@drawable/pubnative_ratingbar_small_material</item>
+    </style>
+
+</resources>
