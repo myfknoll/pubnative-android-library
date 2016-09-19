@@ -10,5 +10,5 @@ public interface PubnativeMeta {
     String CAMPAIGN_ID   = "campaignid";
     String CREATIVE_ID   = "creativeid";
     String BUNDLE_ID     = "bundleid";
-    String CONTENT_INFO  = "adchoices";
+    String CONTENT_INFO  = "contentinfo";
 }

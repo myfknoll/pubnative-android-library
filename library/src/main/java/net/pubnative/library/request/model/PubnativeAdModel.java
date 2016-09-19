@@ -67,6 +67,7 @@ public class PubnativeAdModel implements PubnativeImpressionTracker.Listener,
     protected           boolean               mIsClickLoaderEnabled       = true;
     protected           boolean               mIsClickInBackgroundEnabled = true;
     protected           boolean               mIsClickCachingEnabled      = false;
+    protected           boolean               mIsClickPreparing           = false;
     protected           String                mClickFinalURL              = null;
     //Tracking
     private transient   boolean               mIsImpressionConfirmed      = false;
@@ -492,7 +493,8 @@ public class PubnativeAdModel implements PubnativeImpressionTracker.Listener,
 
     protected void prepareClickURL() {
 
-        if (isRevenueModelCPA() && mIsClickCachingEnabled && mClickFinalURL == null) {
+        if (isRevenueModelCPA() && mIsClickCachingEnabled && mClickFinalURL == null && !mIsClickPreparing) {
+            mIsClickPreparing = true;
             mUUID = UUID.randomUUID();
             String firstReqUrl = getClickUrl() + "&uxc=true&uuid=" + mUUID.toString();
             URLDriller driller = new URLDriller();
@@ -526,6 +528,7 @@ public class PubnativeAdModel implements PubnativeImpressionTracker.Listener,
     protected void onPrepareClickURLFinish(String url) {
 
         mClickFinalURL = url;
+        mIsClickPreparing = false;
         if (mIsWaitingForClickCache) {
 
             mIsWaitingForClickCache = false;
@@ -619,10 +622,11 @@ public class PubnativeAdModel implements PubnativeImpressionTracker.Listener,
                     }
                     invokeOnClick(view);
                     confirmClickBeacons(view.getContext());
+
                     if (mIsClickInBackgroundEnabled) {
-
+                        
                         if (mIsClickCachingEnabled) {
-
+                            
                             if (mClickFinalURL == null) {
                                 mIsWaitingForClickCache = true;
                             } else {

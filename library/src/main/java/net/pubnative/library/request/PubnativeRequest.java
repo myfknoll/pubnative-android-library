@@ -377,16 +377,16 @@ public class PubnativeRequest implements PubnativeHttpRequest.Listener,
             if (apiResponseModel == null) {
                 invokeOnFail(new Exception("PubnativeRequest - Error: Response JSON error"));
             } else if (PubnativeAPIV3ResponseModel.Status.OK.equals(apiResponseModel.status)) {
-                List<PubnativeAdModel> models = null;
+                List<PubnativeAdModel> resultModels = null;
                 if (apiResponseModel.ads != null) {
-                    for (PubnativeAPIV3AdModel ad : apiResponseModel.ads) {
-                        if (models == null) {
-                            models = new ArrayList<>();
+                    for (PubnativeAPIV3AdModel adModel : apiResponseModel.ads) {
+                        if (resultModels == null) {
+                            resultModels = new ArrayList<PubnativeAdModel>();
                         }
-                        models.add(PubnativeAdModel.create(mContext, ad));
+                        resultModels.add(PubnativeAdModel.create(mContext, adModel));
                     }
                 }
-                invokeOnSuccess(models);
+                invokeOnSuccess(resultModels);
             } else {
                 invokeOnFail(new Exception("PubnativeRequest - Error: Server error: " + apiResponseModel.error_message));
             }
